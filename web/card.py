@@ -3,6 +3,8 @@ from datetime import datetime
 import random
 from datetime import datetime, timedelta
 
+from db import *
+
 '''
 逻辑
 unfamilar  不认识
@@ -25,8 +27,6 @@ master 掌握了
 
 -- 程序化判定通过： 在两周内有三次以上的 rem_cnt > 3
 '''
-
-db = Database()
 
 G_masterd_words = set()
 

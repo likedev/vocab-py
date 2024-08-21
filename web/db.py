@@ -1,5 +1,6 @@
 import pymysql
 from pymysql.cursors import DictCursor
+from config import *
 
 
 class Database:
@@ -8,7 +9,7 @@ class Database:
         db_config = {
             'host': 'localhost',
             'user': 'root',
-            'password': 'root',
+            'password': MYSQL_PASS,
             'database': 'vocab',
             'charset': 'utf8mb4'
         }
@@ -27,3 +28,5 @@ class Database:
 
     def close(self):
         self.connection.close()
+
+db = Database()
