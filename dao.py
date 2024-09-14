@@ -8,7 +8,7 @@ connection = pymysql.connect(host='localhost',
                              cursorclass=pymysql.cursors.DictCursor)
 
 
-def insert_record( record):
+def insert_record(record):
     with connection.cursor() as cursor:
         sql = "INSERT INTO words (word, video_local, video_url, s, p, start, end, title) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
         cursor.execute(sql, (

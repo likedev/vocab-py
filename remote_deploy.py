@@ -8,7 +8,7 @@ config_path = r"D:\apps\桌面\my_server.json"
 
 app_path = "/opt/app/video-eng-words"
 app_port = 6688
-start_cmd = "python3 web/api.py"
+start_cmd = "python3 api.py"
 
 # 读取JSON配置文件
 with open(config_path, 'r') as f:

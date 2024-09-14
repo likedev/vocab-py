@@ -1,7 +1,7 @@
 import os
 import pprint
 
-from caption_parser import parse_caption
+from script.caption_parser import parse_caption
 from spider.crawlEapfoundation import get_eap_word_map, get_alias_map
 from video_util import cut_video
 
@@ -121,7 +121,6 @@ def all_contains(all_words, keywords):
     return True
 
 
-import json
 import re
 
 

@@ -1,0 +1,3 @@
+As in google translate,
+you can use the automatic language detection with mymemory by using "auto" as an argument for the source language.
+However, this feature in the mymemory translator is not so powerful as in google translate.
