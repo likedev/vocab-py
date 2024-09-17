@@ -1,6 +1,11 @@
 import json
 from collections import defaultdict
 from db import db
+from common import ok_data
+from fastapi import APIRouter
+
+
+router = APIRouter()
 
 # Global variables to store the vocabulary data
 vocab_data = {}
@@ -52,3 +57,11 @@ def get_original_form(word):
 # Function to get the frequency rank of a word
 def get_frequency_rank(word):
     return frequency_rank.get(word, -1)
+
+
+
+# Function to get the original form of a word via API
+@router.get("/word/original-form/{word}")
+async def get_original_form_api(word: str):
+    original_form = get_original_form(word)
+    return ok_data({"word": word, "original_form": original_form})

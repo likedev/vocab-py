@@ -137,7 +137,7 @@ def process_word(word):
         word_data = vocab.vocab_data.get(original_form)
         if word_data:
             freq_rank = vocab.get_frequency_rank(original_form)
-            if word_data['status'] != 'master' and freq_rank > 3000:
+            if word_data['status'] != 'master' and freq_rank > 2000:
                 # Preserve original punctuation
                 return re.sub(clean_word, f"<keyword>{clean_word}</keyword>", word, flags=re.IGNORECASE)
     return word
@@ -227,3 +227,6 @@ async def get_book_by_id(book_id: int):
     if not result:
         raise HTTPException(status_code=404, detail="Book not found")
     return ok_data(result[0])
+
+
+

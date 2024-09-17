@@ -470,9 +470,10 @@ async def update_word_ai_note_api(word: str):
 
 # Import the router from the book module
 from book import router as book_router
-
+from vocab import router as vocab_router
 # Include the book router in the main FastAPI app
 app.include_router(book_router)
+app.include_router(vocab_router)
 
 
 # Startup event handler
